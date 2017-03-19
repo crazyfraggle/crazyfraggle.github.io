@@ -1,3 +1,6 @@
+---
+---
+
 @charset "utf-8";
 
 @font-face {
@@ -58,6 +61,5 @@ $on-laptop:        800px;
 @import
         "base",
         "layout",
-        "syntax-highlighting",
-        "postlist"
+        "syntax-highlighting"
 ;

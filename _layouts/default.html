@@ -16,10 +16,11 @@
         <section class="extra">
             <div class="blurb">{{ site.whoami }}</div>
             <div class="posts">
-                <ul>
+                <h3 class="posts">Posts</h3>
+                <ul class="post-list">
                     {% for post in site.posts %}
                     <li>
-                        <a href="{{ post.url }}">{{ post.title }}</a> {{ post.excerpt }}
+                        {{ post.date | date_to_string }}: <a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
                     </li>
                     {% endfor %}
                 </ul>
