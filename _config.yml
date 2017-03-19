@@ -1,3 +1,9 @@
+title: Quite Frankly
+email: frank@oppervoll-larsen.no
+description: >
+  Frank is writing about life, programming, gaming and other topics that
+  spring to mind.
+baseurl: ""
+url: "https://crazyfraggle.github.io"
+twitter_username: crazyfraggle
 timezone: Europe/Oslo
-
-theme: jekyll-theme-minimal
