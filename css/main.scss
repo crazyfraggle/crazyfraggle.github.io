@@ -1,0 +1,43 @@
+@charset "utf-8";
+
+@font-face {
+    font-family: 'LindenHill';
+    src: url('LindenHill-webfont.woff') format('woff'), /* Pretty Modern Browsers */
+         url('LindenHill-webfont.ttf')  format('truetype'), /* Safari, Android, iOS */
+         url('LindenHill-webfont.svg#webfontrHfAltGz') format('svg'); /* Legacy iOS */
+    font-style: normal;
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: 'LindenHill';
+    src: url('LindenHill-italic-webfont.woff') format('woff'), /* Pretty Modern Browsers */
+         url('LindenHill-italic-webfont.ttf')  format('truetype'), /* Safari, Android, iOS */
+         url('LindenHill-italic-webfont.svg#webfontrHfAltGz') format('svg'); /* Legacy iOS */
+    font-style: italic;
+    font-weight: normal;
+}
+
+// Our variables
+$base-font-family: "LindenHill", serif;
+$base-font-size:   16px;
+$base-font-weight: 400;
+$small-font-size:  $base-font-size * 0.875;
+$base-line-height: 1.5;
+
+$spacing-unit:     30px;
+
+$text-color:       #111;
+$background-color: #fdfdfd;
+$brand-color:      #2a7ae2;
+
+$grey-color:       #828282;
+$grey-color-light: lighten($grey-color, 40%);
+$grey-color-dark:  darken($grey-color, 25%);
+
+// Width of the content area
+$content-width:    800px;
+
+$on-palm:          600px;
+$on-laptop:        800px;
+
