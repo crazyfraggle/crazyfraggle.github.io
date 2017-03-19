@@ -8,19 +8,23 @@
     {% include header.html %}
 
     <div class="page-content">
-        <div class="wrapper">
-            {{ content }}
-        </div>
-
-        <div class="posts">
-            <ul>
-                {% for post in site.posts %}
-                <li>
-                    <a href="{{ post.url }}">{{ post.title }}</a> {{ post.excerpt }}
-                </li>
-                {% endfor %}
-            </ul>
-        </div>
+        <section class="main">
+            <div class="wrapper">
+                {{ content }}
+            </div>
+        </section>
+        <section class="extra">
+            <div class="blurb">{{ site.whoami }}</div>
+            <div class="posts">
+                <ul>
+                    {% for post in site.posts %}
+                    <li>
+                        <a href="{{ post.url }}">{{ post.title }}</a> {{ post.excerpt }}
+                    </li>
+                    {% endfor %}
+                </ul>
+            </div>
+        </section>
     </div>
 
     {% include footer.html %}
