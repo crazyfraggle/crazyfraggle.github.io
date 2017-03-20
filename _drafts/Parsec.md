@@ -14,12 +14,24 @@ back when I was just 6-7 years old.  I have fond memories of sitting with my
 father, typing in Basic commands that I barely understood the meaning of, to
 create small visual effects on the screen.
 
+{% include figure.html file="/static/images/parsec/ti994a.jpg" caption="The TI 99/4A" %}
+
 The TI 99/4A had a cartridge slot for games and applications, and we had two
 games with our machine: "TI Invaders" - A quite well made Space invaders clone,
 and "TI Parsec", a side scrolling space shoot-em-up. This is the game I'll be
 cloning.
 
+{% include figure.html file="/static/images/parsec/screen1.jpg" caption="TI Parsec, the original" %}
+
+Those who want to experience the real thing can try out the
+[Classic99](http://www.harmlesslion.com/cgi-bin/showprog.cgi?search=Classic99)
+emulator, which includes the Parsec ROM under license from Texas Instruments. My
+version will deviate some from the original, this is a clone, not a
+reimplementation.
+
 ## Tech
+
+Quick look at the technology being used.
 
 ### Langauge
 

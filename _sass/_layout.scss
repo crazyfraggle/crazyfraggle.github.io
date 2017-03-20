@@ -172,6 +172,8 @@
 .page-content {
     padding: $spacing-unit 0;
     display: flex;
+    max-width: 1000px;
+    margin: 0 auto;
 }
 
 .page-heading {
