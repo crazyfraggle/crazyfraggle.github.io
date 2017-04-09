@@ -18,7 +18,7 @@ create small visual effects on the screen.
 
 The TI 99/4A had a cartridge slot for games and applications, and we had two
 games with our machine: "TI Invaders" - A quite well made Space invaders clone,
-and "TI Parsec", a side scrolling space shoot-em-up. This is the game I'll be
+and "TI Parsec" - a side scrolling space shoot-em-up. This is the game I'll be
 cloning.
 
 {% include figure.html file="/static/images/parsec/screen1.jpg" caption="TI Parsec, the original" %}
@@ -48,7 +48,8 @@ I've chosen to write the game in Typescript.  There are two reasons for this.
 
 Since I wanted to make this from scratch, I've so far skipped on using any
 libraries at all.  This also helps keep the final code size to a minimum.
-Webpack is used to pack the code into a single bundle.
+Webpack is used to pack the code into a single bundle.  I might investigate some
+libraries later though.
 
 The game renders to a normal HTML canvas.  Currently no optimization tricks have
 been attempted, as they have not been necessary for the game to run smoothly.
