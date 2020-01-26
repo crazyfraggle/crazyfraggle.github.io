@@ -1,7 +1,7 @@
 ---
 layout: android
 title: "Fetching data from Microsoft Graph using Tasker"
-date: 2020-01-26 18:00:00 +0100
+date: 2020-01-27 00:00:00 +0100
 categories: android
 ---
 
