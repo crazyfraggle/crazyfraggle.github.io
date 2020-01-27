@@ -60,7 +60,8 @@ account, or github account.
 
 ### Step 2: Get application ID and a secret key
 
-The application ID is displayed on the App registration page. ![TBD image]()
+The application ID is displayed on the App registration page after the
+application is registered. Take a copy of this.
 
 To generate the secret, go to "Certificates and secrets".
 
