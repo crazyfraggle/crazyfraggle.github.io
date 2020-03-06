@@ -108,7 +108,9 @@ select
 5. _Endpoint to get refresh token_:
    `https://login.microsoftonline.com/common/oauth2/v2.0/token`
 6. _Scopes_: Add the scopes you need here. Same naming as used in the
-   permissions set earlier. For this sample we need at least `User.Read` here.
+   permissions set earlier. For this sample we need at least the `User.Read`
+   scope. **For re-authentication to work, we also need to add `offline_access`
+   here.**
 7. _Force reauthentication_: Should be off, enable if you have auth issues. This
    will cause the login prompt on every execution of your task.
 
@@ -193,5 +195,8 @@ KLWP.
   security settings configured. Chances are high that your administrator has
   blocked access from unauthorized applications.
 
-- There seems to be an issue with renewing the tokens in the `HTTP Auth` step.
-  When auth fails, attempts to access graph data will result in an error.
+## Update 2020-02-21: offline_access
+
+Apparently, in order to get a `refresh_token` with the auth request, you need to
+add the scope `offline_access` to the list of scopes. Updated the steps above to
+include that.
