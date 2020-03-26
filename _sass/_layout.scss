@@ -6,7 +6,7 @@
   border-bottom: 1px solid $grey-color-light;
   min-height: 56px;
   padding: 0 $spacing-unit;
-  background-color: darkcyan;
+  background-color: $brand-color;
 
   // Positioning context for the mobile navigation icon
   position: relative;
@@ -168,7 +168,6 @@
 .page-content {
   padding: $spacing-unit 0;
   display: flex;
-  max-width: 1000px;
   margin: 0 auto;
 }
 
@@ -196,10 +195,12 @@
 }
 
 section.main {
-  flex-basis: 66%;
+  flex-basis: 800px;
+  flex-shrink: 1;
 }
 aside.extra {
-  flex-basis: 33%;
+  flex-basis: 300px;
+  flex-shrink: 1;
 }
 
 /**
@@ -210,7 +211,7 @@ aside.extra {
 }
 
 .post-title {
-  font-size: 42px;
+  font-size: $base-font-size * 2;
   letter-spacing: -1px;
   line-height: 1;
 
@@ -223,7 +224,7 @@ aside.extra {
   margin-bottom: $spacing-unit;
 
   h2 {
-    font-size: 32px;
+    font-size: $base-font-size * 1.6;
 
     @include media-query($on-laptop) {
       font-size: 28px;
@@ -231,7 +232,7 @@ aside.extra {
   }
 
   h3 {
-    font-size: 26px;
+    font-size: $base-font-size * 1.3;
 
     @include media-query($on-laptop) {
       font-size: 22px;
@@ -239,7 +240,7 @@ aside.extra {
   }
 
   h4 {
-    font-size: 20px;
+    font-size: $base-font-size * 1.1;
 
     @include media-query($on-laptop) {
       font-size: 18px;
