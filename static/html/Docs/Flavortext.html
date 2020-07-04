@@ -1,0 +1,197 @@
+<html>
+  <head>
+    <title>Proposal for FlavorText standard</title>
+    <link REL=STYLESHEET TYPE="text/css" HREF="../frank.css">
+  </head>
+  <body bgcolor="#ffffff">
+<pre>
+<b>Date:</b> <font color="#808000">Sat, 18 May 1996 02:10:29 -0700</font>
+<b>From:</b> <font color="#808000" size=+1>"Matthew `GrendelFish' Dockrey" &lt;rdockrey@comtch.iea.com&gt;</font>
+<b>To:</b> <font color="#808000">frankrl@stud.cs.uit.no</font>
+<b>Subject:</b> <font color="#808000">Proposal for Flavortext standard</font>
+</pre>
+<p class=header>
+This is something I wrote last year, looked like it just might fit in. 
+Webbed at <a href="http://www.iea.com/~rdockrey/rfc4242.html">http://www.iea.com/~rdockrey/rfc4242.html</a>.
+</p>
+<hr>
+<p>
+M. Dockrey<br>
+November 1995<br>
+Request for Comments: 4242<br>
+Catagory: Proposal
+</p>
+<h1 align=center>Proposal for FlavorText Standard</h1>
+
+<h2>1. Introduction</h2>
+<p class=text>
+This RFC introduces a proposal for the new FlavorText standard, 
+centering on FlavorText
+Markup Language. Because of the proliferation of ChemoTranmision 
+Input-Output Devices
+(CTIOD) the use of smells and tastes has expanded expondentialy. When 
+CTIODs were
+expensive and painfully intrusive instruments, there was little need for 
+standardization. Now that
+almost every new home computer comes with one, the time has come to 
+create a recognized way
+to interface them. OlfactoryNet has done a great deal of research into 
+the use of smells, so this
+RFC will concentrate on the less developed World Wide Tongue.
+</p>
+<h2>2. The Overall Scheme for Incorperating Tastes</h2>
+<p class=text>
+Tastes will be accesible either through a FlavorText Transfer Protocal 
+(FTTP) or through the use
+of another application that supports Sweet/Sour/Bitter/Salty (SSBS) 
+codes, such as a FlavorText
+reader. In this case it will be up to individual uses to formalize the 
+representation of SSBS, but in
+this RFC the FlavorText Markup Language (FTML) will be discused. Also, 
+detailed technical
+notes will be included for FTTP.
+</p>
+<h2>3. FlavorText Transfer Protocal</h2>
+<p class=text>
+There will be a FlavorText Transfer Protocal Daemon listening on tcp 
+port 40. This FTTPD will
+handle the appropriat connections and transer of Flavor Text. Upon 
+connection the FTTP client
+will send a string using the following format:
+</p>
+<pre>
+     FTTP=V.1.0
+     DATE=FEB-30-97
+     HOST=foo.bar.edu
+     REQUEST=fttp://wwt.server.org/filename.ftml
+     BROWSER=MozzarellaV.3.14159
+     PLEA=PRETTY-PLEASE
+</pre>
+<p class=text>
+The FTTPD will then return the requested ftml file, assuming that there 
+is one and that the browser
+given supports the tastes in it. Besides ftml files, FTTP will be able 
+to access other files as well.
+The file will be returned using the following format:
+</p>
+<pre>
+     BEGIN FTTP...
+     (ftml goes here)
+     ...END FTTP
+</pre>
+<p class=text>
+Future versions will include the ability to REQUEST multiple ftml files 
+at once.
+</p>
+<h2>4. Sweet/Sour/Bitter/Salty Codes</h2>
+<p class=text>
+In order to allow FlavorText and the use of CTIODs to remain as open as 
+possible this RFC will
+deal only partialy with specific uses. Because of the need for one set 
+way to refer to certain, if
+crude, tastes, this RCF puts forth a proposal for SSBS codes. By giving 
+each of the four basic
+tastes a hexidecimal value from 0 to ff (1 to 256 in decimal) most 
+simple tastes can be created. For
+more complex tastes formats such as Flavor Mapped (.FMP) or Joint 
+Culinary Expert Group
+(.JCEG) are needed. These are discussed in more detail in RCF 2718.
+</p>
+<p class=text>
+The general format for a SSBS code will be a string of 16 characters, 
+such as #efa90017. In this
+case we have referenced a taste close to a sweet-n-sour sauce. It can be 
+broken down into ef a9
+00 17. It is ef/ff (239/256) sweet, a9/ff (169/256) sour, not at all 
+bitter and 17/359 salty. Of
+course, this is only an aproximation of sweet-n-sour sauce, but it is 
+much easier to use and transfer
+than a full blown .FMP file.
+</p>
+<h2>5. FlavorText Markup Language</h2>
+<p class=text>
+Because of the utter lack of a standard format for referencing tastes, 
+this RCF outlines a
+FlavorText Markup Language here. While what is given will provide an 
+adequate begining, future
+versions will include more substance.
+</p>
+<p class=text>
+Ftml uses tags, consisting of angle brackets surronding the tag, with 
+optional tagmeat, such as
+&lt;TAG TAGMEAT&gt;. Any tag that affects a range of text is closed with 
+&lt;/TAG&gt;. While ftml is not
+case sensative, the tagmeat is usualy written in caps for readability 
+purposes. A ftml file consists of
+two major fields: &lt;HEAD&gt; and &lt;BODY&gt;. The &lt;HEAD&gt; field simply gives the 
+name of the page,
+and has little to do with FTTP. Inside the &lt;BODY&gt; is the plain- and 
+FlavorText of the page.
+</p>
+<p class=text>
+
+Flavors are referenced in a ftml page using either SSBS codes or a FTTP 
+link. Both versions can
+be used for the background, text or inline tastes. In the case of 
+background flavors the taste must
+be defined in the tagmeat of the &lt;BODY&gt; tag. Also, the default (if any) 
+flavor for text goes inside
+the the &lt;BODY&gt; tag. Specific text flavors and inline tastes go inside 
+the &lt;BODY&gt; field.
+</p>
+<p class=text>
+
+The &lt;BODY&gt; tag is versatile enough to allow either SSBS codes or more 
+advanced flavor
+mapped files. In the case of the later it tiles the file for the 
+background. An average page might
+have a &lt;BODY BGTASTE="#efa90017" 
+TEXT="fttp://wwt.foo.bar/tastes/meatloaf.fmp"&gt; or
+&lt;BODY BGTASTE="sweet_and_sour.jceg" TEXT="#2a00c401"&gt; as the tag. Inside 
+the BODY
+tag, BGTASTE and TEXT can be used to change the background and text 
+flavors, respectively.
+Note that they can reference SSBS codes, local files or even remote 
+files by FTTP.
+</p>
+<p class=text>
+
+Inside the &lt;BODY&gt; field there are two ways to use flavor: text and 
+inline tastes. To change text
+from the default flavor (if any) given in the &lt;BODY&gt; tag, the &lt;FONT&gt; tag 
+is used, as in &lt;FONT
+FLAVOR="#efa90017"&gt;text&lt;/FONT&gt;. This is the standard way for SSBS codes, 
+but to
+reference a flavor mapped file either localy or on a remote machine, one 
+must include a FlavorText
+link, such as &lt;A 
+FRC="fttp://wwt.foo.bar/tastes/mashpotato.jceg"&gt;text&lt;/A&gt;. Inline tastes 
+are
+easier in that they don't make a difference between SSBS codes and 
+flavor mapped files. Their tag
+is a simple &lt;FLV SRC="#ef19oo17"&gt; or &lt;FLV
+SRC="fttp://wwt.foo.bar/tastes/jonestown_grape_koolaid.fmp"&gt;
+</p>
+<p class=text>
+
+While this has been as brief overview of ftml, it contains enough basics 
+to allow the use and growth
+of it.
+</p>
+<h2>6. Security Concerns</h2>
+<p class=text>
+Security concerns are not addressed in this document.
+</p>
+<h2>7. Conclusion</h2>
+<p class=text>
+Hopefully this RFC has set up the framework for the use of FlavorText 
+and CLIODs in general.
+Fnord.
+</p>
+<hr>
+<p class=footer>
+Thanks to Matthew for sending me this.<br>
+- Frank<br>
+<a href="index.html">Back to the HTML files</a></p>
+</body>
+</html>

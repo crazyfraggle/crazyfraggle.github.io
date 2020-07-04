@@ -1,0 +1,25 @@
+.justify {
+  text-align: justify;
+}
+H1 {
+  font-family: Arial, Helvetica, sans-serif;
+  border-bottom-width: thin;
+  border-color: #00ff00;
+}
+P.poem {
+  font-family: Fixed, Courier, monospace;
+}
+P.text {
+  text-align: justify;
+  text-indent: 1cm;
+  margin-top: 5pt;
+  margin-bottom: 5pt;
+}
+P.header {
+  color: #ff0000;
+  text-align: center;
+}
+P.footer {
+  color: #ff0000;
+  text-align: left;
+}
