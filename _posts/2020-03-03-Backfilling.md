@@ -2,10 +2,8 @@
 title: "Backfilling old stories"
 date: 2020-04-15 23:00:00 +0100
 categories: personal
-layout: default
+layout: post
 ---
-
-# Backfilling old stories
 
 In order to consolidate my blogging in a single source, I'm backfilling my old
 blog from [Blogger](https://blog.crazyfraggle.com/), and will eventually
