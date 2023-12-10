@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: frontpage
 ---
 
 This is my second attempt at keeping a little blog. I plan to write a bit about
