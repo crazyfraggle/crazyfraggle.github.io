@@ -8,6 +8,17 @@ Jekyll, feel free. The file structure should be quite straight forward to
 understand, it is mostly following the guide from
 [the Jekyll docs](https://jekyllrb.com/docs/)
 
+## Install developer dependencies
+
+Extracted from the Jekyll docs above. 
+First, set up local `gem` installation path if you haven't already. (Tip: It's
+in the [zsh-customs](https://github.com/crazyfraggle/zsh-customs) setup.)
+
+```sh
+sudo apt-get install ruby-full build-essential zlib1g-dev
+gem install jekyll bundler
+```
+
 ## Running locally
 
 To preview the site before pushing to github, running Jekyll locally is a good
