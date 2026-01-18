@@ -1,3 +1,17 @@
+# SvelteKit
+.svelte-kit
+build
+node_modules
+
+# IDE
+.vscode
+.idea
+
+# Jekyll (legacy - can be removed after full migration)
 .sass-cache
 _site
 .jekyll-cache
+
+# Misc
+.DS_Store
+*.local
