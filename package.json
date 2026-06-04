@@ -16,5 +16,8 @@
     "typescript": "^5.0.0",
     "vite": "^6.4.2"
   },
-  "type": "module"
+  "type": "module",
+  "dependencies": {
+    "@fontsource/ibm-plex-mono": "^5.2.7"
+  }
 }

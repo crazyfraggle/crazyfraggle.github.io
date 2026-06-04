@@ -24,9 +24,19 @@
 
 <style>
 	.post {
+		max-width: var(--content-width);
+		margin: 2rem auto;
 		background-color: var(--color-bg-card);
+		border: 1px solid var(--rule);
 		border-radius: 12px;
 		padding: 2rem;
+	}
+
+	@media (max-width: 700px) {
+		.post {
+			margin: 1rem;
+			padding: 1.5rem;
+		}
 	}
 
 	header {

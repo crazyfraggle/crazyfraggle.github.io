@@ -1,11 +1,15 @@
 <script lang="ts">
 	import '../app.css';
+	import '@fontsource/ibm-plex-mono/400.css';
+	import '@fontsource/ibm-plex-mono/600.css';
 	import Header from '$lib/components/Header.svelte';
 	import Footer from '$lib/components/Footer.svelte';
-	import PostList from '$lib/components/PostList.svelte';
-	import type { LayoutData } from './$types';
+	import { page } from '$app/state';
 
-	let { data, children }: { data: LayoutData; children: any } = $props();
+	let { children }: { children: any } = $props();
+
+	// The landing page has its own terminal masthead, so the banner is redundant there.
+	let showHeader = $derived(page.route.id !== '/');
 </script>
 
 <svelte:head>
@@ -13,15 +17,13 @@
 </svelte:head>
 
 <div class="app">
-	<Header />
+	{#if showHeader}
+		<Header />
+	{/if}
 
-	<div class="page-content">
-		<main class="content">
-			{@render children()}
-		</main>
-
-		<PostList posts={data.posts} />
-	</div>
+	<main>
+		{@render children()}
+	</main>
 
 	<Footer />
 </div>
@@ -33,30 +35,8 @@
 		min-height: 100vh;
 	}
 
-	.page-content {
-		display: flex;
+	main {
 		flex: 1;
-		max-width: var(--max-width);
 		width: 100%;
-		margin: 0 auto;
-		padding: 2rem;
-		gap: 2rem;
-	}
-
-	.content {
-		flex: 1;
-		max-width: var(--content-width);
-		min-width: 50vw;
-	}
-
-	@media (max-width: 900px) {
-		.page-content {
-			flex-direction: column;
-			padding: 1rem;
-		}
-
-		.content {
-			max-width: 100%;
-		}
 	}
 </style>

@@ -28,14 +28,34 @@
 
 /* CSS Custom Properties */
 :root {
-	--color-bg: #161616;
-	--color-bg-elevated: #1e1e1e;
-	--color-bg-card: #222222;
-	--color-text: #d3d3d3;
-	--color-text-muted: #888888;
-	--color-accent: #d14d01;
-	--color-accent-hover: #e65a0a;
-	--color-border: #333333;
+	/* Steampunk-terminal palette — warm dark oxblood base, polished brass accents */
+	--bg:            #1a0f0d;  /* page base — deep oxblood/leather */
+	--panel:         #2a1410;  /* terminal title bar, raised panels */
+	--card:          #241310;  /* featured card fill */
+	--brass-border:  #6b4a2b;  /* default borders, rivets (dim) */
+	--brass-border2: #8a6a3b;  /* emphasis borders, rivet dots */
+	--brass:         #d4af37;  /* polished brass — headings, title */
+	--brass-dim:     #c9a227;  /* prompt symbol, secondary brass */
+	--copper:        #b5732f;  /* dates, year labels, accent */
+	--olive:         #7a8b3a;  /* logbook bullet markers */
+	--text:          #e8d9b5;  /* primary body text */
+	--text-muted:    #cbb98f;  /* intro paragraph, secondary */
+	--text-dim:      #a8946a;  /* blurbs */
+	--comment:       #6b5230;  /* dim italic gap annotations, footer */
+	--rule:          #3a2418;  /* faint dividers */
+
+	--font-mono:  'IBM Plex Mono', 'JetBrains Mono', ui-monospace, 'Courier New', monospace;
+	--font-serif: Georgia, 'Times New Roman', serif;  /* the "engraved" face */
+
+	/* Legacy tokens remapped onto the warm palette so post pages inherit it */
+	--color-bg: var(--bg);
+	--color-bg-elevated: var(--panel);
+	--color-bg-card: var(--card);
+	--color-text: var(--text);
+	--color-text-muted: var(--text-muted);
+	--color-accent: var(--copper);
+	--color-accent-hover: var(--brass);
+	--color-border: var(--rule);
 	--font-family: 'Junction', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
 	--max-width: 1200px;
 	--content-width: 800px;
