@@ -2,7 +2,7 @@
 title: "Picking up again"
 date: 2021-08-21 23:00:00 +0100
 categories: parsec
-featured: true
+featured: false
 blurb: Dusting off a semi-abandoned side project and talking myself into finishing it.
 tags: [gamedev, parsec]
 ---
